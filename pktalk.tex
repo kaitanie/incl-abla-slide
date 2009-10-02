@@ -96,14 +96,33 @@ Energy range & 150 MeV - 3 GeV \\
 Target nuclei & Carbon - Uranium \\
 \hline
 \end{tabular}
-\caption{INCL \footnote{A. Boudard, C. Volant, S. Leray, J.C. David (CEA/SPhN),
-J. Cugnon, T. Aoust, P. Henrotte (Univ. Li\'{e}ge - Belgium)}
-  Monte Carlo simulation key features}
+\caption{Key features}
 \end{table}
-\includegraphics[width=1.0\textwidth]{inclSchematic}
+\vskip2mm
+\includegraphics[width=1.0\textwidth]{interactions}
 \end{minipage}
 \begin{minipage}{0.5\textwidth}
-\includegraphics[width=1.0\textwidth]{interactions}
+\includegraphics[width=1.0\textwidth]{inclSchematic}
+\vskip2mm
+\begin{itemize}
+\item INCL~\footnote{A. Boudard, C. Volant, S. Leray, J.C. David (CEA/SPhN),
+  J. Cugnon, T. Aoust, P. Henrotte (Univ. Li\'{e}ge - Belgium)}
+  tracks particles explicitly in time.
+\item Stop the cascade when stopping time $t_{stop} = 70.0~\mathrm{fm/c}~(A/208)^{0.16}$ is
+  reached.
+\end{itemize}
+\end{minipage}
+\end{minipage}
+}
+
+\frame{
+\frametitle{Thin target results}
+\begin{minipage}{1.0\textwidth}
+\begin{minipage}{0.5\textwidth}
+\includegraphics[width=1.0\textwidth]{proton1200MeVAl}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\includegraphics[width=1.0\textwidth]{proton1600MeVPb}
 \end{minipage}
 \end{minipage}
 }
