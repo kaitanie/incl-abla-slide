@@ -3,7 +3,7 @@
 %\PAPERtrue % select either slide or note
 \PAPERfalse  
 
-\def\t{\title{INCL intra-nuclear cascade development in C++ for Geant4}}
+\def\t{\title{INCL intra-nuclear cascade development for Geant4}}
 
 \def\a{
 \author{P.~Kaitaniemi}
@@ -96,7 +96,7 @@ Energy range & 150 MeV - 3 GeV \\
 Target nuclei & Carbon - Uranium \\
 \hline
 \end{tabular}
-\caption{Key features}
+\caption{Model validity range}
 \end{table}
 \vskip2mm
 \includegraphics[width=1.0\textwidth]{interactions}
@@ -116,7 +116,7 @@ Target nuclei & Carbon - Uranium \\
 }
 
 \frame{
-\frametitle{Thin target results}
+\frametitle{Double-differential neutron energy spectra}
 \begin{minipage}{1.0\textwidth}
 \begin{minipage}{0.5\textwidth}
 \includegraphics[width=1.0\textwidth]{proton1200MeVAl}
@@ -150,58 +150,6 @@ Target nuclei & Carbon - Uranium \\
 \end{figure}
 \end{minipage}
 \end{minipage}
-}
-
-\subsection{}
-\frame{
-\frametitle{INCL4.3}
-INCL\footnote{A. Boudard, C. Volant, S. Leray, J.C. David (CEA/SPhN),
-J. Cugnon, T. Aoust, P. Henrotte (Univ. Li\'{e}ge - Belgium)} provides spallation model
-coupled with evaporation and fission models.
-\vspace{0.4cm}
-
-\begin{itemize}
-\item Possibility to use Geant4 Fermi break-up or
-ABLA\footnote{K-H Schmidt, A. Kelic, J. Benlliure GSI and Univ Santiago de C.} 
-de-excitation (evaporation and fission).
-
-\item Based on physics (phenomenology reduced)
-to be predictive.
-
-\item $\sigma(E)$ and $d\sigma/d\Sigma(\theta)$ from experiments,
-no ad hoc parameters in the model.
-
-\item Series of elementary scattering explicitly followed in time.
-
-\item Trajectories are straight lines.
-\end{itemize}
-%REMINDER: There is no $\pi N \rightarrow \pi N$, but it is partly taken
-%          into account through $\Delta$ formation and decay.
-\begin{center}
-\includegraphics[width=0.6\textwidth]{interactions}
-\end{center}
-% No piN->piN  but piN<->Delta  
-% NOTE: Say that there is no explicit piN scattering but through a 
-%       \Delta formation and decay it is partly taken into account.
-}
-
-\subsection{}
-\frame{
-\frametitle{INCL4.3 (cont.)}
-\begin{itemize}
-\item Pauli blocking on nucleons after each events + long range correlation (CDPP).
-
-\item No collision between spectators, only reflections (cannot escape).
-
-\item Stopping time of the cascade:   $t_{max}= 70.0~\mathrm{fm/c}~(A/208)^{0.16}$.
-
-\item Current version INCL4.3. supports
-light cluster production (d, t, $^3$He, $^4$He)\footnote{First version 
-       of light cluster production Nucl. Phys. A740 (2004) 195}.
-
-\item All outgoing particles (remnant nucleus, nucleons, pions)
-characterised by (A, Z, E$^{*}$, J, P, $\theta$, $\phi$).
-\end{itemize}
 }
 
 \end{document}
